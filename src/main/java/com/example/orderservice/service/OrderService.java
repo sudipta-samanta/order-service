@@ -36,6 +36,6 @@ public class OrderService {
     }
 
     private Payment processPayment(Payment payment) {
-        return restTemplate.postForObject("http://localhost:8082/payment/doPayment", payment, Payment.class);
+        return restTemplate.postForObject("http://payment-service/payment/doPayment", payment, Payment.class);
     }
 }
